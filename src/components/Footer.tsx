@@ -25,11 +25,17 @@ export const Footer: React.FC = () => {
           <div className="lg:col-span-5 space-y-4">
             <Link to="/" className="inline-flex items-center gap-3 group">
               <div className="w-11 h-11 rounded-full overflow-hidden bg-white p-0.5 shadow-md flex-shrink-0">
-                <img
-                  src="/images/raadnyi logo.png"
-                  alt="Raadnyi Clothing Official Logo"
-                  className="w-full h-full object-contain"
-                />
+                <picture>
+                  <source srcSet="/images/raadnyi-logo.webp" type="image/webp" />
+                  <img
+                    src="/images/raadnyi logo.png"
+                    alt="Raadnyi Clothing Official Logo"
+                    width={44}
+                    height={44}
+                    loading="lazy"
+                    className="w-full h-full object-contain"
+                  />
+                </picture>
               </div>
               <div>
                 <span className="font-playfair text-2xl font-bold tracking-tight text-white group-hover:text-[#FCE4E6] transition-colors leading-none block">

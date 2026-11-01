@@ -283,11 +283,17 @@ export const HomePage: React.FC = () => {
                     '0 20px 45px rgba(110, 60, 30, 0.16), 0 0 25px rgba(214, 168, 79, 0.22), inset 0 0 0 1px rgba(255, 255, 255, 0.25)',
                 }}
               >
-                <img
-                  src="/images/Elegant Ivory Satin Fashion Portrait.png"
-                  alt="Raadnyi Western Wear - Ivory Satin Outfit"
-                  className="w-full h-full object-cover object-top"
-                />
+                <picture>
+                  <source srcSet="/images/Elegant Ivory Satin Fashion Portrait.webp" type="image/webp" />
+                  <img
+                    src="/images/Elegant Ivory Satin Fashion Portrait.png"
+                    alt="Raadnyi Western Wear - Ivory Satin Outfit"
+                    width={450}
+                    height={600}
+                    loading="lazy"
+                    className="w-full h-full object-cover object-top"
+                  />
+                </picture>
               </div>
             </div>
 
@@ -353,10 +359,10 @@ export const HomePage: React.FC = () => {
         {/* 4 Image Lookbook Grid */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-5">
           {[
-            { img: '/images/Burgundy Puff-Sleeve Elegance.png', label: 'Party Edit' },
-            { img: '/images/Blush Blazer, Charcoal Trousers.png', label: 'Tailored Chic' },
-            { img: '/images/Sky Blue Shirt Editorial Portrait.png', label: 'Casual Poplin' },
-            { img: '/images/Emerald Satin Dress Portrait.png', label: 'Satin Mood' },
+            { img: '/images/Burgundy Puff-Sleeve Elegance.webp', fallback: '/images/Burgundy Puff-Sleeve Elegance.png', label: 'Party Edit' },
+            { img: '/images/Blush Blazer, Charcoal Trousers.webp', fallback: '/images/Blush Blazer, Charcoal Trousers.png', label: 'Tailored Chic' },
+            { img: '/images/Sky Blue Shirt Editorial Portrait.webp', fallback: '/images/Sky Blue Shirt Editorial Portrait.png', label: 'Casual Poplin' },
+            { img: '/images/Emerald Satin Dress Portrait.webp', fallback: '/images/Emerald Satin Dress Portrait.png', label: 'Satin Mood' },
           ].map((item, idx) => (
             <a
               key={idx}
@@ -365,12 +371,17 @@ export const HomePage: React.FC = () => {
               rel="noopener noreferrer"
               className="group relative aspect-square overflow-hidden rounded-2xl bg-[#F7EDE6] shadow-sm border border-gray-100 block"
             >
-              <img
-                src={item.img}
-                alt={`Raadnyi Western Wear - ${item.label}`}
-                loading="lazy"
-                className="w-full h-full object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-106"
-              />
+              <picture>
+                <source srcSet={item.img} type="image/webp" />
+                <img
+                  src={item.fallback}
+                  alt={`Raadnyi Western Wear - ${item.label}`}
+                  loading="lazy"
+                  width={300}
+                  height={300}
+                  className="w-full h-full object-cover object-[center_20%] transition-transform duration-500 group-hover:scale-106"
+                />
+              </picture>
               <div className="absolute inset-0 bg-black/45 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center text-white p-4">
                 <div className="text-center">
                   <Instagram size={24} className="mx-auto mb-1.5 text-[#FCE4E6]" />

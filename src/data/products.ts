@@ -23,7 +23,7 @@ export const CATEGORIES = [
     name: 'Party Wear',
     slug: 'party-wear',
     desc: 'Evening gowns, ruched cocktail dresses & satin jumpsuits designed for celebrations.',
-    image: '/images/Champagne Gold Embellished Gown Portrait.png',
+    image: '/images/Champagne Gold Embellished Gown Portrait.webp',
     count: '6 Curated Styles',
   },
   {
@@ -31,7 +31,7 @@ export const CATEGORIES = [
     name: 'Casual Wear',
     slug: 'casual-wear',
     desc: 'Tailored blazers, relaxed wide-leg denims & linen co-ords for everyday confidence.',
-    image: '/images/Blush Blazer, Charcoal Trousers.png',
+    image: '/images/Blush Blazer, Charcoal Trousers.webp',
     count: '6 Curated Styles',
   },
   {
@@ -39,7 +39,7 @@ export const CATEGORIES = [
     name: 'Tops',
     slug: 'tops',
     desc: 'Crisp poplin shirts, draped satin blouses & fine-knit tops crafted for versatile styling.',
-    image: '/images/Ivory Blouse and Burgundy Trousers.png',
+    image: '/images/Ivory Blouse and Burgundy Trousers.webp',
     count: '6 Curated Styles',
   },
 ] as const;
@@ -53,10 +53,10 @@ export const PRODUCTS: Product[] = [
     category: 'Party Wear',
     price: 4899,
     originalPrice: 5999,
-    image: '/images/Champagne Gold Embellished Gown Portrait.png',
+    image: '/images/Champagne Gold Embellished Gown Portrait.webp',
     gallery: [
-      '/images/Champagne Gold Embellished Gown Portrait.png',
-      '/images/Elegant Shimmering One-Shoulder Evening Dress.png',
+      '/images/Champagne Gold Embellished Gown Portrait.webp',
+      '/images/Elegant Shimmering One-Shoulder Evening Dress.webp',
     ],
     description:
       'A breathtaking floor-length evening gown detailed with shimmering champagne embellishments and an elegant drape, crafted for gala evenings, cocktail receptions, and high-glamour celebrations.',
@@ -80,10 +80,10 @@ export const PRODUCTS: Product[] = [
     category: 'Party Wear',
     price: 3499,
     originalPrice: 4299,
-    image: '/images/Emerald Satin Dress Portrait.png',
+    image: '/images/Emerald Satin Dress Portrait.webp',
     gallery: [
-      '/images/Emerald Satin Dress Portrait.png',
-      '/images/Emerald Satin Fashion Portrait.png',
+      '/images/Emerald Satin Dress Portrait.webp',
+      '/images/Emerald Satin Fashion Portrait.webp',
     ],
     description:
       'Luxurious rich emerald green midi dress cut in glossy satin with an asymmetric cowl neckline and ruching along the waist that flatters every silhouette.',
@@ -107,10 +107,10 @@ export const PRODUCTS: Product[] = [
     category: 'Party Wear',
     price: 3299,
     originalPrice: 3999,
-    image: '/images/Burgundy Ruched Dress Portrait.png',
+    image: '/images/Burgundy Ruched Dress Portrait.webp',
     gallery: [
-      '/images/Burgundy Ruched Dress Portrait.png',
-      '/images/Burgundy Elegance with Sparkling Clutch.png',
+      '/images/Burgundy Ruched Dress Portrait.webp',
+      '/images/Burgundy Elegance with Sparkling Clutch.webp',
     ],
     description:
       'A statement cocktail dress in Raadnyi’s signature deep maroon burgundy hue. Featuring all-over figure-defining ruching and a modern scoop neckline.',
@@ -134,10 +134,10 @@ export const PRODUCTS: Product[] = [
     category: 'Party Wear',
     price: 4299,
     originalPrice: 5199,
-    image: '/images/Elegant Navy One-Shoulder Gown.png',
+    image: '/images/Elegant Navy One-Shoulder Gown.webp',
     gallery: [
-      '/images/Elegant Navy One-Shoulder Gown.png',
-      '/images/Elegant Shimmering One-Shoulder Evening Dress.png',
+      '/images/Elegant Navy One-Shoulder Gown.webp',
+      '/images/Elegant Shimmering One-Shoulder Evening Dress.webp',
     ],
     description:
       'Refined evening glamour in midnight navy. The structured one-shoulder cut elongates the neckline while the gentle side slit delivers timeless elegance.',
@@ -160,10 +160,10 @@ export const PRODUCTS: Product[] = [
     category: 'Party Wear',
     price: 3799,
     originalPrice: 4599,
-    image: '/images/Elegant Teal Satin Jumpsuit Portrait.png',
+    image: '/images/Elegant Teal Satin Jumpsuit Portrait.webp',
     gallery: [
-      '/images/Elegant Teal Satin Jumpsuit Portrait.png',
-      '/images/Elegant Ivory Satin Fashion Portrait.png',
+      '/images/Elegant Teal Satin Jumpsuit Portrait.webp',
+      '/images/Elegant Ivory Satin Fashion Portrait.webp',
     ],
     description:
       'The modern alternative to an evening dress. Tailored in deep teal satin with a cinched waistline, pleated palazzo legs, and subtle front tie detailing.',
@@ -186,10 +186,10 @@ export const PRODUCTS: Product[] = [
     category: 'Party Wear',
     price: 3599,
     originalPrice: 4399,
-    image: '/images/Burgundy Puff-Sleeve Elegance.png',
+    image: '/images/Burgundy Puff-Sleeve Elegance.webp',
     gallery: [
-      '/images/Burgundy Puff-Sleeve Elegance.png',
-      '/images/Joyful Plum Dress Studio Portrait.png',
+      '/images/Burgundy Puff-Sleeve Elegance.webp',
+      '/images/Joyful Plum Dress Studio Portrait.webp',
     ],
     description:
       'Playful yet deeply sophisticated, this deep maroon dress features organza-lined puff sleeves, a square neckline, and a structured A-line skirt.',
@@ -214,10 +214,10 @@ export const PRODUCTS: Product[] = [
     category: 'Casual Wear',
     price: 2699,
     originalPrice: 3299,
-    image: '/images/Casual Chic Studio Fashion Portrait.png',
+    image: '/images/Casual Chic Studio Fashion Portrait.webp',
     gallery: [
-      '/images/Casual Chic Studio Fashion Portrait.png',
-      '/images/Relaxed Studio Fashion Portrait.png',
+      '/images/Casual Chic Studio Fashion Portrait.webp',
+      '/images/Relaxed Studio Fashion Portrait.webp',
     ],
     description:
       'Effortless daytime styling in a warm neutral palette. This matching set combines a cropped tailored jacket with pleated, relaxed wide-leg trousers.',
@@ -240,10 +240,10 @@ export const PRODUCTS: Product[] = [
     category: 'Casual Wear',
     price: 2499,
     originalPrice: 2999,
-    image: '/images/Casual Denim Style Portrait.png',
+    image: '/images/Casual Denim Style Portrait.webp',
     gallery: [
-      '/images/Casual Denim Style Portrait.png',
-      '/images/Cheerful Casual Denim Fashion Portrait.png',
+      '/images/Casual Denim Style Portrait.webp',
+      '/images/Cheerful Casual Denim Fashion Portrait.webp',
     ],
     description:
       'Everyday denim elevated with contemporary tailoring. Cut in washed cotton denim with a high-rise waist and fluid wide-leg fall that transitions easily into evening.',
@@ -266,10 +266,10 @@ export const PRODUCTS: Product[] = [
     category: 'Casual Wear',
     price: 3899,
     originalPrice: 4799,
-    image: '/images/Blush Blazer, Charcoal Trousers.png',
+    image: '/images/Blush Blazer, Charcoal Trousers.webp',
     gallery: [
-      '/images/Blush Blazer, Charcoal Trousers.png',
-      '/images/Blush Skirt Studio Portrait.png',
+      '/images/Blush Blazer, Charcoal Trousers.webp',
+      '/images/Blush Skirt Studio Portrait.webp',
     ],
     description:
       'A smart-casual power look pairing a pastel blush unstructured blazer with sharply tailored charcoal grey cigarette trousers. Perfect for meetings, brunches, and casual gallery days.',
@@ -292,10 +292,10 @@ export const PRODUCTS: Product[] = [
     category: 'Casual Wear',
     price: 2999,
     originalPrice: 3699,
-    image: '/images/Elegant Ivory Linen Jumpsuit Portrait.png',
+    image: '/images/Elegant Ivory Linen Jumpsuit Portrait.webp',
     gallery: [
-      '/images/Elegant Ivory Linen Jumpsuit Portrait.png',
-      '/images/Professional Casual Outdoor Portrait.png',
+      '/images/Elegant Ivory Linen Jumpsuit Portrait.webp',
+      '/images/Professional Casual Outdoor Portrait.webp',
     ],
     description:
       'Sun-drenched ease in natural ivory linen. Features an adjustable waist belt, breezy wide cropped legs, and wooden button details for effortless weekend elegance.',
@@ -318,10 +318,10 @@ export const PRODUCTS: Product[] = [
     category: 'Casual Wear',
     price: 2399,
     originalPrice: 2899,
-    image: '/images/Playful Striped Denim Studio Portrait.png',
+    image: '/images/Playful Striped Denim Studio Portrait.webp',
     gallery: [
-      '/images/Playful Striped Denim Studio Portrait.png',
-      '/images/Cheerful Casual Denim Fashion Portrait.png',
+      '/images/Playful Striped Denim Studio Portrait.webp',
+      '/images/Cheerful Casual Denim Fashion Portrait.webp',
     ],
     description:
       'A fresh urban aesthetic combining fine pinstriped denim trousers with a relaxed casual finish, crafted for modern street style and coffee dates.',
@@ -344,10 +344,10 @@ export const PRODUCTS: Product[] = [
     category: 'Casual Wear',
     price: 2799,
     originalPrice: 3499,
-    image: '/images/Polished Casual Studio Portrait.png',
+    image: '/images/Polished Casual Studio Portrait.webp',
     gallery: [
-      '/images/Polished Casual Studio Portrait.png',
-      '/images/Minimalist Sage Green Fashion Portrait.png',
+      '/images/Polished Casual Studio Portrait.webp',
+      '/images/Minimalist Sage Green Fashion Portrait.webp',
     ],
     description:
       'Clean lines and calm earth tones. This minimalist ensemble in muted sage green includes tailored high-waist culottes and a matching lightweight mock-layer.',
@@ -372,10 +372,10 @@ export const PRODUCTS: Product[] = [
     category: 'Tops',
     price: 1499,
     originalPrice: 1899,
-    image: '/images/Casual Sage Top Studio Portrait.png',
+    image: '/images/Casual Sage Top Studio Portrait.webp',
     gallery: [
-      '/images/Casual Sage Top Studio Portrait.png',
-      '/images/Cheerful Portrait in Sage Green.png',
+      '/images/Casual Sage Top Studio Portrait.webp',
+      '/images/Cheerful Portrait in Sage Green.webp',
     ],
     description:
       'A wardrobe foundation piece crafted in premium wide-rib knit cotton. Features a clean crew neckline and fitted silhouette that tucks smoothly into trousers and skirts.',
@@ -398,10 +398,10 @@ export const PRODUCTS: Product[] = [
     category: 'Tops',
     price: 1899,
     originalPrice: 2399,
-    image: '/images/Ivory Blouse and Burgundy Trousers.png',
+    image: '/images/Ivory Blouse and Burgundy Trousers.webp',
     gallery: [
-      '/images/Ivory Blouse and Burgundy Trousers.png',
-      '/images/Ivory Top, Burgundy Trousers.png',
+      '/images/Ivory Blouse and Burgundy Trousers.webp',
+      '/images/Ivory Top, Burgundy Trousers.webp',
     ],
     description:
       'Fluid elegance for work or evening. Cut in lustrous ivory satin with draped cowl detail and buttoned French cuffs that command instant polish.',
@@ -424,10 +424,10 @@ export const PRODUCTS: Product[] = [
     category: 'Tops',
     price: 1699,
     originalPrice: 2199,
-    image: '/images/Lavender Blouse and Ivory Skirt Portrait.png',
+    image: '/images/Lavender Blouse and Ivory Skirt Portrait.webp',
     gallery: [
-      '/images/Lavender Blouse and Ivory Skirt Portrait.png',
-      '/images/Smiling in Burgundy and Cream.png',
+      '/images/Lavender Blouse and Ivory Skirt Portrait.webp',
+      '/images/Smiling in Burgundy and Cream.webp',
     ],
     description:
       'Romantic femininity embodied in delicate lavender chiffon. Detailed with subtle shirring along the neckline and soft blouson sleeves.',
@@ -450,10 +450,10 @@ export const PRODUCTS: Product[] = [
     category: 'Tops',
     price: 1799,
     originalPrice: 2299,
-    image: '/images/Sky Blue Shirt Editorial Portrait.png',
+    image: '/images/Sky Blue Shirt Editorial Portrait.webp',
     gallery: [
-      '/images/Sky Blue Shirt Editorial Portrait.png',
-      '/images/Smiling in Sky-Blue Lace and White Trousers.png',
+      '/images/Sky Blue Shirt Editorial Portrait.webp',
+      '/images/Smiling in Sky-Blue Lace and White Trousers.webp',
     ],
     description:
       'The quintessential Western shirt reimagined. Crisp cotton poplin in clear sky blue, tailored with an easy oversized silhouette, mother-of-pearl buttons, and dropped shoulders.',
@@ -476,10 +476,10 @@ export const PRODUCTS: Product[] = [
     category: 'Tops',
     price: 1599,
     originalPrice: 1999,
-    image: '/images/Smiling in Sky-Blue Lace and White Trousers.png',
+    image: '/images/Smiling in Sky-Blue Lace and White Trousers.webp',
     gallery: [
-      '/images/Smiling in Sky-Blue Lace and White Trousers.png',
-      '/images/Smiling Woman in Dusty Pink and Charcoal.png',
+      '/images/Smiling in Sky-Blue Lace and White Trousers.webp',
+      '/images/Smiling Woman in Dusty Pink and Charcoal.webp',
     ],
     description:
       'Feminine texture meets modern everyday comfort. Delicate floral lace inset across the shoulders and sleeves elevates this soft powder blue top.',
@@ -502,10 +502,10 @@ export const PRODUCTS: Product[] = [
     category: 'Tops',
     price: 1649,
     originalPrice: 2099,
-    image: '/images/Smiling Woman in Striped Sweater and Trousers.png',
+    image: '/images/Smiling Woman in Striped Sweater and Trousers.webp',
     gallery: [
-      '/images/Smiling Woman in Striped Sweater and Trousers.png',
-      '/images/Confident Maroon and Cream Portrait.png',
+      '/images/Smiling Woman in Striped Sweater and Trousers.webp',
+      '/images/Confident Maroon and Cream Portrait.webp',
     ],
     description:
       'A Parisian-inspired Breton stripe top in ultra-fine cotton knit. Styled with a classic boat neckline and bracelet-length sleeves for timeless polish.',

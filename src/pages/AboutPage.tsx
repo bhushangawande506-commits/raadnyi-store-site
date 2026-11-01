@@ -59,11 +59,17 @@ export const AboutPage: React.FC = () => {
           </div>
 
           <div className="relative aspect-[4/5] rounded-2xl overflow-hidden bg-[#F7EDE6] shadow-md border border-gray-100">
-            <img
-              src="/images/Smiling South Asian Fashion Portrait.png"
-              alt="Raadnyi Western Wear Model"
-              className="w-full h-full object-cover object-top"
-            />
+            <picture>
+              <source srcSet="/images/Smiling South Asian Fashion Portrait.webp" type="image/webp" />
+              <img
+                src="/images/Smiling South Asian Fashion Portrait.png"
+                alt="Raadnyi Western Wear Model"
+                loading="lazy"
+                width={500}
+                height={625}
+                className="w-full h-full object-cover object-top"
+              />
+            </picture>
           </div>
         </div>
 

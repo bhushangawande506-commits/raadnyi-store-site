@@ -41,13 +41,19 @@ export const Header: React.FC<HeaderProps> = ({ onOpenSearch }) => {
 
           {/* Brand Logo & Wordmark */}
           <Link to="/" className="flex items-center gap-3 group">
-            {/* Original Logo Image — Preserved Unchanged */}
+            {/* Original Logo Image — Optimized WebP with PNG Fallback */}
             <div className="w-11 h-11 sm:w-13 sm:h-13 rounded-full overflow-hidden flex items-center justify-center bg-white shadow-sm border border-[#7A0B2E]/15 group-hover:border-[#7A0B2E]/30 transition-all flex-shrink-0">
-              <img
-                src="/images/raadnyi logo.png"
-                alt="Raadnyi Clothing Official Logo"
-                className="w-full h-full object-contain p-0.5"
-              />
+              <picture>
+                <source srcSet="/images/raadnyi-logo.webp" type="image/webp" />
+                <img
+                  src="/images/raadnyi logo.png"
+                  alt="Raadnyi Clothing Official Logo"
+                  width={52}
+                  height={52}
+                  fetchPriority="high"
+                  className="w-full h-full object-contain p-0.5"
+                />
+              </picture>
             </div>
 
             {/* Typography */}

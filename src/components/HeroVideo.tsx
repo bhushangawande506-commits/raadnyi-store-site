@@ -9,10 +9,22 @@ export const HeroVideo: React.FC = () => {
   const [isMuted, setIsMuted] = useState(true);
 
   useEffect(() => {
-    if (videoRef.current) {
-      videoRef.current.play().catch(() => {
-        // Autoplay may be restricted by browser until user gesture
-      });
+    const video = videoRef.current;
+    if (!video) return;
+
+    // Explicitly enforce muted DOM property for iOS Safari & Chromium autoplay policies
+    video.muted = true;
+    video.defaultMuted = true;
+
+    const playPromise = video.play();
+    if (playPromise !== undefined) {
+      playPromise
+        .then(() => {
+          setVideoLoaded(true);
+        })
+        .catch(() => {
+          // Autoplay restricted by user-agent data/battery policy; poster remains gracefully visible
+        });
     }
   }, []);
 
@@ -20,6 +32,9 @@ export const HeroVideo: React.FC = () => {
     if (videoRef.current) {
       videoRef.current.muted = !isMuted;
       setIsMuted(!isMuted);
+      if (videoRef.current.paused) {
+        videoRef.current.play().catch(() => {});
+      }
     }
   };
 
@@ -28,33 +43,46 @@ export const HeroVideo: React.FC = () => {
       className="relative w-full overflow-hidden bg-[#1A0F07] h-[100svh] min-h-[85svh] lg:h-[calc(100vh-96px)] lg:min-h-[640px] lg:max-h-[840px]"
       style={{ minHeight: '85svh' }}
     >
-      {/* Background Video with Responsive Framing */}
+      {/* Background Video with Responsive Framing & Optimized Multi-Source Delivery */}
       {!videoError && (
         <video
           ref={videoRef}
-          src="/videos/raadnyi hero video.mp4"
-          poster="/images/Champagne Gold Embellished Gown Portrait.png"
+          poster="/images/hero-poster.webp"
           autoPlay
           muted
           loop
           playsInline
+          preload="auto"
           onLoadedData={() => setVideoLoaded(true)}
+          onPlaying={() => setVideoLoaded(true)}
           onError={() => setVideoError(true)}
           className="absolute inset-0 w-full h-full object-cover object-[center_15%] sm:object-[center_16%] lg:object-[68%_20%] xl:object-[70%_20%] transition-opacity duration-700"
           style={{
             opacity: videoLoaded ? 1 : 0.85,
             filter: 'brightness(0.96) contrast(1.04)',
           }}
-        />
+        >
+          {/* Stream-optimized WebM (1.21 MB) for modern Chrome, Firefox, Edge */}
+          <source src="/videos/raadnyi-hero-video.webm" type="video/webm" />
+          {/* Stream-optimized Faststart H.264 MP4 (1.91 MB) for Safari, iOS, and general compatibility */}
+          <source src="/videos/raadnyi-hero-video.mp4" type="video/mp4" />
+          {/* Legacy fallback */}
+          <source src="/videos/raadnyi%20hero%20video.mp4" type="video/mp4" />
+        </video>
       )}
 
-      {/* Fallback Image if video error or while loading */}
+      {/* Fallback Image if video error or while loading (Ultra-fast 77 KB WebP poster) */}
       {(videoError || !videoLoaded) && (
-        <img
-          src="/images/Champagne Gold Embellished Gown Portrait.png"
-          alt="Raadnyi Western Wear Collection"
-          className="absolute inset-0 w-full h-full object-cover object-[center_15%] lg:object-[68%_20%] filter brightness-95"
-        />
+        <picture>
+          <source srcSet="/images/hero-poster.webp" type="image/webp" />
+          <img
+            src="/images/Champagne Gold Embellished Gown Portrait.png"
+            alt="Raadnyi Western Wear Collection"
+            fetchPriority="high"
+            loading="eager"
+            className="absolute inset-0 w-full h-full object-cover object-[center_15%] lg:object-[68%_20%] filter brightness-95"
+          />
+        </picture>
       )}
 
       {/* Responsive Editorial Overlays */}
